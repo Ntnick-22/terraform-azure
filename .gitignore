@@ -1,0 +1,12 @@
+# .gitignore
+
+
+**/.terraform/
+**/.terraform.lock.hcl
+
+
+*.tfstate
+*.tfstate.backup
+
+# Sensitive variable files
+*.tfvars
