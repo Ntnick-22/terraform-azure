@@ -1,15 +1,15 @@
 resource "azurerm_public_ip" "nat" {
   name                = "nat-gw-pip"
-  location            = data.terraform_remote_state.rg.outputs.resource_groups["my-rg"].location
-  resource_group_name = data.terraform_remote_state.rg.outputs.resource_groups["my-rg"].name
+  location            = "West Europe"
+  resource_group_name = "my-rg"
   allocation_method   = "Static"
   sku                 = "Standard"
 }
 
 resource "azurerm_nat_gateway" "core" {
   name                = "core-nat-gw"
-  location            = data.terraform_remote_state.rg.outputs.resource_groups["my-rg"].location
-  resource_group_name = data.terraform_remote_state.rg.outputs.resource_groups["my-rg"].name  
+  location            = "West Europe"
+  resource_group_name = "my-rg"
   sku_name            = "Standard"
 }
 

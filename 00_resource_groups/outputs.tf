@@ -7,4 +7,4 @@ output "resource_groups" {
         tags     = v.tags
       }
     }
-}
+} 
